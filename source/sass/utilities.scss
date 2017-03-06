@@ -5,3 +5,39 @@
 .flex-1 {
   flex: 1;
 }
+
+.background-left-slant {
+  margin-left: 0.6em;
+  padding-left: 0.5em;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 0.8em;
+    background-color: inherit;
+    transform: skew(-20deg);
+    display: block;
+    position: absolute;
+    height: 100%;
+    margin-left: -0.8em;
+  }
+}
+
+.background-right-slant {
+  margin-right: 0.6em;
+  padding-right: 0.5em;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 0.6em;
+    background-color: inherit;
+    transform: skew(-20deg);
+    display: block;
+    position: absolute;
+    height: 100%;
+    margin-right: -0.3em;
+    right: 0;
+    top: 0;
+  }
+}
